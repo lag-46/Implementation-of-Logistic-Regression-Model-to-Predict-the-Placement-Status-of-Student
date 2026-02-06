@@ -9,15 +9,63 @@ To write a program to implement the the Logistic Regression Model to Predict the
 
 ## Algorithm
 
-1.Import necessary libraries (pandas, LabelEncoder, train_test_split, etc.).
+1.Load Placement dataset using pandas.
 
-2.Load the dataset using pd.read_csv().
+2.Remove unnecessary columns (sl_no, salary).
 
-3.Create a copy of the dataset and drop unnecessary columns (sl_no, salary).
+3.Check missing and duplicate values.
 
-4.Check for missing and duplicate values using isnull().sum() and duplicated().sum().
+4.Convert categorical data into numerical values using Label Encoding.
 
-5.Encode categorical variables using LabelEncoder() to convert them into numerical values.
+5.Separate Independent variables (X) and Dependent variable (Y).
+
+6.Split dataset into Training and Testing data.
+
+7.Create Logistic Regression model.
+
+8.Train model using training data.
+
+9.Calculate probability using Logistic (Sigmoid) Function:
+   
+   
+  P(Y=1) = 1 / (1 + e^-(W·X + b))
+
+10.Predict class label using decision rule:
+  
+  
+  If P ≥ 0.5 → Class = 1
+     
+  If P < 0.5 → Class = 0
+
+11.Predict output for test data.
+
+12.Calculate Accuracy using formula:
+     
+     
+  Accuracy = (TP + TN) / (TP + TN + FP + FN)
+
+13.Create Confusion Matrix:
+    
+    
+    
+  Confusion Matrix =
+  
+  [ TP FP ]
+
+  [ FN TN ]
+
+14.Generate Classification Report using:
+
+
+  Precision = TP / (TP + FP)
+  
+  
+  Recall = TP / (TP + FN)
+  
+  
+  F1 Score = 2 * (Precision * Recall) / (Precision + Recall)
+
+15.Predict result for new input data using trained model.
 
 ## Program:
 ```
